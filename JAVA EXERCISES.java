@@ -1,4 +1,4 @@
-1.Scan a string and print all the characters until it meets lowercase character.
+//1.Scan a string and print all the characters until it meets lowercase character.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -11,7 +11,7 @@ class main{
   System.out.print(d.toString());}
 }
 
-2.Given two strings, write a code to compare two strings to check and say equal or not. 
+//2.Given two strings, write a code to compare two strings to check and say equal or not. 
 import java.util.*;
 class Main{
   public static void main(String[] args)
@@ -30,7 +30,7 @@ class Main{
   }
 }
 
-3.Write a program to implement strupr function.
+//3.Write a program to implement strupr function.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -38,7 +38,7 @@ class main{
     String d=n.nextLine();
     System.out.print(d.toUpperCase());}}
 
-4.Given number of elements , array and K value, Find the minimum number of Swaps required to get elements less then K and  greater elements on the right  side.
+//4.Given number of elements , array and K value, Find the minimum number of Swaps required to get elements less then K and  greater elements on the right  side.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -70,7 +70,7 @@ class main{
   }
 }
 
-5.Write a program to check whether the given array of elements are in a Monotonic order or Not.
+//5.Write a program to check whether the given array of elements are in a Monotonic order or Not.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -108,7 +108,7 @@ class main{
   }
 }
 
-6.Write a program to check whether the given array of elements are in a Bitonic order or Not.
+//6.Write a program to check whether the given array of elements are in a Bitonic order or Not.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -136,7 +136,7 @@ class main{
     return i==h;
   }}
 
-7.Write a program to reverse a string except the special characters.
+//7.Write a program to reverse a string except the special characters.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -160,7 +160,7 @@ class main{
   }
 }
 
-8.Write a program to convert the digits in the string into a single number.
+//8.Write a program to convert the digits in the string into a single number.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -175,8 +175,8 @@ class main{
   }
 }
 
-9.Write a program to print the values from 1 to n except multiples of 4. 
-Use continue statement to skip 4.
+//9.Write a program to print the values from 1 to n except multiples of 4. 
+//Use continue statement to skip 4.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -191,7 +191,7 @@ class main{
   }
 }
 
-10.Accept an integer N and generate the first N terms of the fibonacci series.
+//10.Accept an integer N and generate the first N terms of the fibonacci series.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -207,7 +207,7 @@ class main{
   }
 }
 
-11.Check whether the given number is a triangular number.
+//11.Check whether the given number is a triangular number.
 import java.util.*;
 class main{
   public static void main(String[] args){
@@ -225,7 +225,7 @@ class main{
   }
 }
 
-12.Complete the function second_half_reverse(). Function will recieve a starting of address of a linked list . Do reverse the second half of the given singly linked list.
+//12.Complete the function second_half_reverse(). Function will recieve a starting of address of a linked list . Do reverse the second half of the given singly linked list.
 import java.util.*;
 class sll{
   Node head;
@@ -310,7 +310,7 @@ f=f.next;
 }
 
 
-13.Complete the function find_mid_point(). Function will recieve a starting of address of a linked list. Do find the midpoint of the given singly linked list and return it.
+//13.Complete the function find_mid_point(). Function will recieve a starting of address of a linked list. Do find the midpoint of the given singly linked list and return it.
 import java.util.*;
 class sll{
   Node head;
@@ -364,7 +364,7 @@ class sll{
   }
 }
 
-14.Complete the function kth_last_node(). Function will recieve a starting of address of a linked list and a k value. Do find the kth value from the last fo the given singly linked list and return it.
+//14.Complete the function kth_last_node(). Function will recieve a starting of address of a linked list and a k value. Do find the kth value from the last fo the given singly linked list and return it.
 import java.util.*;
 class sll{
   Node head;
@@ -436,5 +436,80 @@ class sll{
     }
     int p=n.nextInt();
     list.rev(p);
+  }
+}
+
+//15.Find the frequency of each digit from the given number.
+import java.util.*;
+class main{
+  public static void  main(String[] args){
+    Scanner n=new Scanner(System.in);
+    long h=n.nextLong();
+    long arr[]=new long[10];
+    long u=0;int r=0;
+    while(h!=0){
+      u=h%10;
+      r=(int)u;
+    arr[r]++;
+      h=h/10;
+  }
+  for(int j=0;j<10;j++){
+    System.out.println(j+" occurs "+arr[j]+" times ");
+  }
+}}
+
+//16.Anagram for 2 numbers. Two numbers are said to be an anagram if both numbers are formed with the same digits.
+import java.util.*;
+class main{
+  public static void main(String[] args){
+    Scanner n=new Scanner(System.in);
+  String  h=n.nextLine();
+  String h1=n.nextLine();
+  char[] c1=h.toCharArray();
+  char[] c2=h1.toCharArray();
+  Arrays.sort(c1);
+  Arrays.sort(c2);
+  if(Arrays.equals(c1,c2))
+  System.out.print("Anagram");
+  else
+  System.out.print("Not");
+  }
+}
+
+
+//17.Check whether the number is a magic number. A magic number is a number where the multiplication of the sum of digits and the sum reverse equals the same number. For example, consider n=1729
+//sum of digits = (1 + 7 + 2 + 9 => 19)
+//The reverse of 19 is 91
+//(19 X 91 = 1729)
+
+import java.util.*;
+class main{
+  public static int add(int y){
+    int u=0,g=0;
+    while(y!=0){
+      u=y%10;
+      g=g+u;
+      y=y/10;
+    }
+    return g;
+  }
+  public static int rev(int r){
+    int e=0,m=0;
+    while(r!=0){
+      m=r%10;
+      e=(e*10)+m;
+      r=r/10;
+    }
+    return e;
+  }
+  public static void main(String[] args){
+    Scanner n=new Scanner(System.in);
+    int j=n.nextInt();
+    int i=add(j);
+    int o=rev(i);
+    if(j==(i*o))
+    System.out.print("YES");
+    else
+    System.out.print("NO");
   }
 }
